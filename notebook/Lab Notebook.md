@@ -1,3 +1,33 @@
+[[2024-04-26]]
+
+Goals:
+
+[[2024-04-25]]
+
+Goals:
+
+[[2024-04-24]]
+
+Goals:
+- read illustrated transformer more closely, look at more detailed references too
+
+[[2024-04-23]]
+
+Goals:
+- start GPT lecture karpathy 7/8
+- watch [transformers lecture](https://www.youtube.com/watch?v=XfpMkf4rD6E&t=618s&ab_channel=StanfordOnline)
+- re-read [GPT1 paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+- skim illustrated transformer
+- start GPT lecture karpathy 7/8
+
+[[2024-04-22]]
+
+Goals:
+- leetcode
+- complete karpathy lecture 6/8
+
+Done:
+- 
 
 [[2024-04-19]]
 
@@ -7,8 +37,19 @@ Goals:
 - finish part 5/8 karpathy lecture
 
 Done:
+- some leetcode problems
 - applied to FAR.AI tech lead job
-
+- did a first pass read of DPO paper
+	- [Umass lecture](https://www.youtube.com/watch?v=2dUSoco8r3U&ab_channel=MohitIyyer) has good detailed look
+- skimmed a few others papers
+- read huggingface rlhf overview
+	- This overview is great, especially the literature section: https://huggingface.co/blog/rlhf
+	- https://huggingface.co/blog/stackllama
+	- learned about `peft` library which can be used for LoRA fine-tuning https://github.com/huggingface/peft
+		- Good rule is ~1.5GB GPU RAM per B params to fine-tune with parameter adatation
+	- LoRA lets us fit models in GPU but training is still slow, data parallelism chunks the training data, computers forward/backward on N GPUs, then merges results to average the gradients ![[Pasted image 20240419151846.png]]
+- An even newer approach to training parallelization is FSDP [fully sharded data parallel](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) - not sure how important this is for PEFT, I think it is only needed for full parameter FT
+- 
 [[2024-04-18]]
 
 Goals:

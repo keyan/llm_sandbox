@@ -1,11 +1,24 @@
 Quick notes on overall takeaways from several key LLM research papers
 
+- [[#Direct Preference Optimization: Your Language Model is Secretly a Reward Model|Direct Preference Optimization: Your Language Model is Secretly a Reward Model]]
 - [[#qlora: efficient finetuning of quantized llms 2023|qlora: efficient finetuning of quantized llms 2023]]
 - [[#language models are few-shot learners|language models are few-shot learners]]
 - [[#constitutional ai: harmlessness from ai feedback|constitutional ai: harmlessness from ai feedback]]
 - [[#Improving Language Understanding by Generative Pre-Training|Improving Language Understanding by Generative Pre-Training]]
 - [[#Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback|Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback]]
 - [[#Training language models to follow instructions with human feedback|Training language models to follow instructions with human feedback]]
+- [[#Fine-Tuning Language Models from Human Preferences|Fine-Tuning Language Models from Human Preferences]]
+
+## Direct Preference Optimization: Your Language Model is Secretly a Reward Model
+
+https://arxiv.org/pdf/2305.18290.pdf
+
+[[2024-04-19]] first pass
+- introduces DPO, alternative to RLHF that learns human preferences from preference data without using RL
+- RLHF fits a reward model to preference data, then uses that rewards model to do RL and update the LM policy
+- DPO directly optimizes a LM without explicit reward modeling or RL
+- DPO optimizes the same objective as RLHF (reward maximization with KL-divergence constraint, not sure what this is?) but is easier to implement and train (both systems level and computationally less expensive)
+- DPO uses clever math to define preference loss as a function of the policy directly, instead of using this to train RM
 
 ## qlora: efficient finetuning of quantized llms 2023
 
@@ -45,3 +58,12 @@ https://arxiv.org/pdf/2203.02155.pdf
 
 - instructgpt
 - todo
+
+## Fine-Tuning Language Models from Human Preferences
+
+https://arxiv.org/pdf/1909.08593.pdf
+
+[[2024-04-19]]
+- Original paper on using RLHF w/ PPO for LM fine-tuning
+- has all the methods and training detail needed for an RLHF reproduction
+- experiments for evaluations use ROGUE as well as human comparison
