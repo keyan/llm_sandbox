@@ -1,33 +1,53 @@
-[[2024-04-26]]
+---
+
+---
+
+---
+
+**Friday** [[2024-04-26]]
 
 Goals:
 
-[[2024-04-25]]
+---
+
+**Thursday** [[2024-04-25]]
 
 Goals:
+- Read through how https://github.com/huggingface/text-generation-inference works
+	- I'd like to understand better how inference servers are written, what is different vs. training structure and how they still work with pre-trained model weights
 
-[[2024-04-24]]
+---
+
+**Wednesday** [[2024-04-24]]
 
 Goals:
 - read illustrated transformer more closely, look at more detailed references too
 
-[[2024-04-23]]
+---
+
+**Tuesday** [[2024-04-23]]
 
 Goals:
-- start GPT lecture karpathy 7/8
 - watch [transformers lecture](https://www.youtube.com/watch?v=XfpMkf4rD6E&t=618s&ab_channel=StanfordOnline)
 - re-read [GPT1 paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
 - skim illustrated transformer
 - start GPT lecture karpathy 7/8
+- apply to METR role
 
-[[2024-04-22]]
+---
+
+**Monday** [[2024-04-22]]
 
 Goals:
-- leetcode
 - complete karpathy lecture 6/8
 
 Done:
-- 
+- finished next karpathy lecture 6/8
+	- wavenet architecture wasn't much of a departure from prior mlp but more good exposure to paper reading
+- reviewed some AI safety material
+- spent a while on just vanilla linear regression, deriving the gradients for MSE loss, implementing in plain numpy, and reading some background material
+
+---
 
 [[2024-04-19]]
 
@@ -49,7 +69,8 @@ Done:
 		- Good rule is ~1.5GB GPU RAM per B params to fine-tune with parameter adatation
 	- LoRA lets us fit models in GPU but training is still slow, data parallelism chunks the training data, computers forward/backward on N GPUs, then merges results to average the gradients ![[Pasted image 20240419151846.png]]
 - An even newer approach to training parallelization is FSDP [fully sharded data parallel](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) - not sure how important this is for PEFT, I think it is only needed for full parameter FT
-- 
+- finished lecture 5/8 on backprop including exercises in notebook
+
 [[2024-04-18]]
 
 Goals:
