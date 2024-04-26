@@ -30,14 +30,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "e12e0f80c37c058c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
           }
         ],
         "currentTab": 1
@@ -171,8 +163,10 @@
   "lastOpenFiles": [
     "Research Paper Notes.md",
     "Lab Notebook.md",
-    "DPO.md",
+    "Useful transformer links.md",
     "images/Pasted image 20240419151846.png",
+    "DPO.md",
+    "Untitled",
     "images",
     "2024-04-19.md",
     "Welcome.md"

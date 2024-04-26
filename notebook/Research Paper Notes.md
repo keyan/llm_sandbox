@@ -27,6 +27,10 @@ https://arxiv.org/pdf/2305.18290.pdf
 
 ## language models are few-shot learners
 
+https://arxiv.org/pdf/2005.14165
+
+edit: [[2024-04-25]] - I think I missed the main finding here... the prior GPT papers didn't touch on the unique aspects of the transformer/GPT arch, that the "inner loop"/"in context learning" learns just from the prompt context, without explicit SGD like during pre-training. This is actually really bizarre because somehow the model is capable of meta-learning, perhaps the model weights are able to do some sort of SGD on the few-shot prompt examples just during a single forward pass. How? Why? We don't know.
+
 - introduces gpt3 but not an interesting paper really for me
 - model architecture is the same as for gpt2 and the paper just discusses different emperical testing procedures for evaluating how gpt3 is more capable
 - provides evidence about scaling laws, an important research finding, but not much value for an implementer
@@ -67,3 +71,11 @@ https://arxiv.org/pdf/1909.08593.pdf
 - Original paper on using RLHF w/ PPO for LM fine-tuning
 - has all the methods and training detail needed for an RLHF reproduction
 - experiments for evaluations use ROGUE as well as human comparison
+
+---
+### Neural Machine Translation By Jointly Learning To Align And Translate 
+https://arxiv.org/pdf/1409.0473.pdf
+
+[[2024-04-25]]
+- precursor paper to "attention is all you need", first time self-attention is introduced
+- section 3.1 has the most detail on the attention mechanism but I still find it hard to parse in isolation, finding clear comparison to modern transformer arch is challenging

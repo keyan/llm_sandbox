@@ -1,38 +1,66 @@
 ---
 
 ---
+**Friday** [[2024-05-03]]
+
+**Thursday** [[2024-05-02]]
+
+**Wednesday** [[2024-05-01]]
+
+Goals:
+- [ ] Read through how https://github.com/huggingface/text-generation-inference works
+	- I'd like to understand better how inference servers are written, what is different vs. training structure and how they still work with pre-trained model weights
+- [ ] watch chp 1 of 16 of [3blue1brown lin alg review](https://www.3blue1brown.com/topics/linear-algebra)
+- [ ] 
+
 
 ---
 
 **Friday** [[2024-04-26]]
 
-Goals:
+Done:
+- mostly applications
+- studying transformers again, currently focused on:
+	- this textbook chapter: https://web.stanford.edu/~jurafsky/slp3/10.pdf
+	- transformers via math: https://johnthickstun.com/docs/transformers.pdf
+	- annotated transformer: https://nlp.seas.harvard.edu/annotated-transformer/
 
 ---
 
 **Thursday** [[2024-04-25]]
 
 Goals:
-- Read through how https://github.com/huggingface/text-generation-inference works
-	- I'd like to understand better how inference servers are written, what is different vs. training structure and how they still work with pre-trained model weights
+- [x] read illustrated transformer more closely, look at more detailed references too
+- [x] watch [transformers lecture](https://www.youtube.com/watch?v=XfpMkf4rD6E&t=618s&ab_channel=StanfordOnline)
+	- mostly skimmed this to get some overview/exposure before digging deeper in the implementation
+- [x] re-read [GPT1 paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
+- [x] start GPT lecture karpathy 7/8
+
+Other done:
+- watched live cs25 lecture on mixtral 
+- skimmed:
+	- "Neural Machine Translation By Jointly Learning To Align And Translate" paper
+	- https://transformer-circuits.pub/2021/framework/index.html - only up to the single layer transformer model, it was a helpful way to look at the simplified model and residual connection importance
+	- 
+- watched 3blue1brown's intro to transformers and attention videos
+- another pass at "attention is all you need" - starting to make more sense now! Implementation details still fuzzy with regards to mutliheaded attention. Probably just hard for everyone to structure these matrices right and get shapes straight
 
 ---
 
 **Wednesday** [[2024-04-24]]
 
-Goals:
-- read illustrated transformer more closely, look at more detailed references too
+Done:
+- Completed farai coding screen - very challenging time constraint but a highly interesting problem. Was able to get all tests passing even though I didn't actually do a proper caching solution on the last part.
+- talked with jon and andrew
 
 ---
 
 **Tuesday** [[2024-04-23]]
 
-Goals:
-- watch [transformers lecture](https://www.youtube.com/watch?v=XfpMkf4rD6E&t=618s&ab_channel=StanfordOnline)
-- re-read [GPT1 paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)
-- skim illustrated transformer
-- start GPT lecture karpathy 7/8
-- apply to METR role
+Done:
+- applied to role at METR
+- several leetcode problems
+- submitted a patch to pytorch
 
 ---
 
@@ -66,6 +94,7 @@ Done:
 	- This overview is great, especially the literature section: https://huggingface.co/blog/rlhf
 	- https://huggingface.co/blog/stackllama
 	- learned about `peft` library which can be used for LoRA fine-tuning https://github.com/huggingface/peft
+		- https://huggingface.co/blog/trl-peft
 		- Good rule is ~1.5GB GPU RAM per B params to fine-tune with parameter adatation
 	- LoRA lets us fit models in GPU but training is still slow, data parallelism chunks the training data, computers forward/backward on N GPUs, then merges results to average the gradients ![[Pasted image 20240419151846.png]]
 - An even newer approach to training parallelization is FSDP [fully sharded data parallel](https://pytorch.org/blog/introducing-pytorch-fully-sharded-data-parallel-api/) - not sure how important this is for PEFT, I think it is only needed for full parameter FT
